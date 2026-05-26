@@ -28,7 +28,7 @@ const TEST_COMMAND = {
 
 const SPEAK_COMMAND = {
   name: 'speak',
-  description: 'Basic command',
+  description: 'demo command',
   type: 1,
   integration_types: [0, 1],
   contexts: [0, 1, 2],
