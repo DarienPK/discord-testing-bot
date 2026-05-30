@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import { getRPSChoices } from './game.js';
-import { capitalize, InstallGlobalCommands } from './utils.js';
+import {getRPSChoices} from './game.js';
+import {capitalize, InstallGlobalCommands} from './utils.js';
 
 // Get the game choices from game.js
 function createCommandChoices() {
@@ -18,7 +18,7 @@ function createCommandChoices() {
 }
 
 // Simple test command
-const TEST_COMMAND = {
+export const TEST_COMMAND = {
   name: 'test',
   description: 'Basic command',
   type: 1,
