@@ -24,7 +24,7 @@ export function createLobby(p1, hostJoining) {
 }
 
 export function addPlayer(p1, scrimID) {
-   let playerList =
+   return p1;
 }
 
 /*
