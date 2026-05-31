@@ -1,8 +1,6 @@
 import { capitalize } from './utils.js';
 
-export function createRegister() {
-  let registerList;
-}
+
 const ScrimJoinChoices = {
   yes: {
     description: 'you will be playing in this match',
@@ -16,7 +14,18 @@ export function getScrimJoinChoices() {
   return Object.keys(ScrimJoinChoices);
 }
 
+export function createLobby(p1, hostJoining) {
+ let playerList = new Map();
+ if (hostJoining == 'yes') {
+    playerList.set(1, p1);
+ }
 
+ return playerList;
+}
+
+export function addPlayer(p1, scrimID) {
+   let playerList =
+}
 
 /*
 export function getResult(p1, p2) {

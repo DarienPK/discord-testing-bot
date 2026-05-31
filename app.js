@@ -129,7 +129,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
           // Create active game using message ID as the game ID
           activeScrims[id] = {
             id: userId,
-            objectName,
+            creatorJoining,
           };
 
           return res.send({
@@ -279,7 +279,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
                                 type: MessageComponentTypes.STRING_SELECT,
                                 // Append scrim ID
                                 custom_id: `select_choice_${scrimId}`,
-                                options: getShuffledOptions(),
+                                options: getScrimJoinChoices(),
                               },
                             ],
                           },
@@ -305,7 +305,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
                     // Calculate result from helper function
                     const resultStr = getResult(activeGames[gameId], {
                       id: userId,
-                      objectName,
+                      creatorJoining,
                     });
 
                     // Remove game from storage
