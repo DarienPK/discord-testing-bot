@@ -2,7 +2,7 @@ import { capitalize } from './utils.js';
 
 export function createRegister() {
   let registerList;
-
+}
 const ScrimJoinChoices = {
   yes: {
     description: 'you will be playing in this match',
@@ -17,7 +17,7 @@ export function getScrimJoinChoices() {
 }
 
 
-}
+
 /*
 export function getResult(p1, p2) {
   let gameResult;
