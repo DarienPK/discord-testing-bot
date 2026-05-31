@@ -130,6 +130,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
           activeScrims[id] = {
             id: userId,
             creatorJoining,
+            console.
           };
 
           return res.send({

@@ -17,7 +17,10 @@ export function getScrimJoinChoices() {
 export function createLobby(p1, hostJoining) {
  let playerList = new Map();
  if (hostJoining == 'yes') {
+    console.log('host DID join');
     playerList.set(1, p1);
+ } else {
+    console.log('host DID NOT join');
  }
 
  return playerList;
