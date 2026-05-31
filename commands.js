@@ -57,7 +57,7 @@ const CHALLENGE_COMMAND = {
     {
       type: 3,
       name: 'object',
-      description: 'Pick your object',
+      description: 'Pick your object spongeboy me bob',
       required: true,
       choices: createCommandChoices(),
     },
@@ -74,7 +74,7 @@ name: 'create_scrim',
     {
       type: 3,
       name: 'object',
-      description: 'Are you playing?',
+      description: 'Are you playing this match?',
       required: true,
       choices: createScrimJoinChoices(),
     },
