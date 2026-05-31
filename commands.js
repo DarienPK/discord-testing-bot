@@ -52,6 +52,23 @@ const CHALLENGE_COMMAND = {
   contexts: [0, 2],
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, SPEAK_COMMAND, CHALLENGE_COMMAND];
+const CREATE_SCRIM_COMMAND = {
+name: 'create_scrim',
+  description: 'Create a scrim registry, that people can join',
+  options: [
+    {
+      type: 3,
+      name: 'object',
+      description: 'Are you playing?',
+      required: true,
+      choices: [yes, no],
+    },
+  ],
+  type: 1,
+  integration_types: [0, 1],
+  contexts: [0, 2],
+}
+
+const ALL_COMMANDS = [TEST_COMMAND, SPEAK_COMMAND, CHALLENGE_COMMAND, CREATE_SCRIM_COMMAND];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
