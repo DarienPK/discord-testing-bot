@@ -51,7 +51,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
                 {
                   type: MessageComponentTypes.TEXT_DISPLAY,
                   //
-                  content: `hello world, i am a new test`
+                  content: `hello world, i am a new test 3`
                 }
               ]
             },
