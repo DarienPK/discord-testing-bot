@@ -3,6 +3,20 @@ import { capitalize } from './utils.js';
 export function createRegister() {
   let registerList;
 
+const ScrimJoinChoices = {
+  yes: {
+    description: 'you will be playing in this match',
+  },
+  no: {
+    description: 'you are NOT playing, and are instead just hanging out',
+  },
+};
+
+export function getScrimJoinChoices() {
+  return Object.keys(ScrimJoinChoices);
+}
+
+
 }
 /*
 export function getResult(p1, p2) {
