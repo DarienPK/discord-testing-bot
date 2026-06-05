@@ -130,7 +130,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
           activeScrims[id] = {
             id: userId,
             creatorJoining,
-            console.
+            console.log('made new scrim with ID of ' + id);
           };
 
           return res.send({
@@ -258,8 +258,8 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
       }
 
       if (componentId.startsWith('join_scrim_button_')) {
-                  // get the associated game ID
-                  const gameId = componentId.replace('join_scrim_button_', '');
+                  // get the associated SCRIM ID
+                  const scrimId = componentId.replace('join_scrim_button_', '');
                   // Delete message with token in request body
                   const endpoint = `webhooks/${process.env.APP_ID}/${req.body.token}/messages/${req.body.message.id}`;
                   try {
@@ -304,9 +304,10 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
                     const userId = context === 0 ? req.body.member.user.id : req.body.user.id;
                     const objectName = data.values[0];
                     // Calculate result from helper function
-                    const resultStr = getResult(activeGames[gameId], {
+                    const resultTable = addPlayer(activeGames[scrimId], {
                       id: userId,
-                      creatorJoining,
+
+
                     });
 
                     // Remove game from storage
